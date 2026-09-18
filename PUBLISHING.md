@@ -143,6 +143,22 @@ git push origin v1.2
 
 ---
 
+## 额外：设置仓库封面（社交预览图）
+
+仓库里已经准备好三张图（都在 `assets/`）：
+
+| 文件 | 用途 |
+|:--|:--|
+| `cover.jpg` | 原始封面图 |
+| `cover_named.jpg` | README 顶部的封面（已带项目名，**推上去自动显示，不用设置**） |
+| `social_preview.png` | 社交预览图（分享仓库链接时显示的大图） |
+
+想让分享链接时显示大图，去设置一次即可：
+
+1. 打开 `github.com/HBrOcean/InkQuill/settings`
+2. 找到 **Social preview** → 点 **Edit**
+3. 上传 `assets/social_preview.png` → 保存
+
 ## 4. 以后如何更新
 
 改完代码后：

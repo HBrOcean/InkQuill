@@ -1,4 +1,12 @@
-# InkQuill · 墨羽
+<p align="center">
+  <img src="assets/cover_named.jpg" width="420" alt="InkQuill">
+</p>
+
+<h1 align="center">InkQuill · 墨羽</h1>
+
+<p align="center">
+  <b>简体中文</b> · <a href="README.en.md">English</a>
+</p>
 
 > 把一张图，变成一笔干净的黑白线稿。
 

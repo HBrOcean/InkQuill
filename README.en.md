@@ -1,4 +1,12 @@
-# InkQuill
+<p align="center">
+  <img src="assets/cover_named.jpg" width="420" alt="InkQuill">
+</p>
+
+<h1 align="center">InkQuill</h1>
+
+<p align="center">
+  <a href="README.md">简体中文</a> · <b>English</b>
+</p>
 
 > Turn a picture into a clean black-and-white line drawing.
 
