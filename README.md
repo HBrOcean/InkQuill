@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/cover_named.jpg" width="420" alt="InkQuill">
+  <img src="assets/social_preview.png" width="820" alt="InkQuill">
 </p>
 
 <h1 align="center">InkQuill · 墨羽</h1>
