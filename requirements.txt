@@ -1,0 +1,8 @@
+# 核心依赖（命令行 + tkinter 界面）
+opencv-python>=4.5
+numpy>=1.20
+pillow>=8.0
+
+# 现代化 Qt 界面（推荐）：
+#   pip install PySide6
+# 不安装时图形界面会自动回退到 Python 自带的 tkinter。

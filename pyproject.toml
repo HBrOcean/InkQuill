@@ -1,0 +1,54 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "inkquill"
+version = "1.1"
+description = "图片转黑白线稿图（输入输出格式一致）— Picture to black & white line art"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [{ name = "Oceaniat", email = "noreply@example.com" }]
+keywords = ["image", "lineart", "sketch", "black-and-white", "raster", "opencv", "gui", "laser"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: X11 Applications",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Multimedia :: Graphics :: Graphics Conversion",
+]
+dependencies = [
+    "opencv-python>=4.5",
+    "numpy>=1.20",
+    "pillow>=8.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7", "ruff>=0.5"]
+gui = ["PySide6>=6.2"]
+fast = ["opencv-contrib-python"]
+
+[project.scripts]
+inkquill = "inkquill:main"
+
+[project.urls]
+Homepage = "https://github.com/HBrOcean/InkQuill"
+Source = "https://github.com/HBrOcean/InkQuill"
+Issues = "https://github.com/HBrOcean/InkQuill/issues"
+
+[tool.setuptools]
+py-modules = ["inkquill"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py38"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I"]
+ignore = ["E501"]
