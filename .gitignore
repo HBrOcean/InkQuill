@@ -27,3 +27,6 @@ _selftest/
 .idea/
 .DS_Store
 Thumbs.db
+
+# CI / 本地打包产物
+out/
