@@ -143,6 +143,35 @@ git push origin v1.2
 
 ---
 
+## 额外：填写仓库简介（About / Description）
+
+仓库首页**右侧**有一个 **About** 区域，点它右上角的 **⚙️ 齿轮** 就能编辑：
+
+1. **Description**（简介）—— 粘贴下面的文案
+2. **Website** —— 可留空，或填 Release 地址
+3. **Topics**（标签）—— 加上下面这些，方便别人搜到你
+
+**推荐简介（英文为主，利于搜索）：**
+
+> Turn pictures into clean black-and-white line art (PySide6/Qt GUI). 4 modes, batch processing, output keeps the input format.
+
+**中文版：**
+
+> 图片转黑白线稿图工具（PySide6 / Qt 界面）—— 四种模式、批量处理、输出与输入同格式。
+
+**推荐 Topics：**
+
+```
+python  opencv  line-art  image-processing  qt  pyside6  sketch  black-and-white  laser-cutting  gui
+```
+
+> 也可以用命令行一次性设置（需要装 `gh`）：
+> ```bash
+> gh repo edit HBrOcean/InkQuill \
+>   --description "Turn pictures into clean black-and-white line art (PySide6/Qt GUI)." \
+>   --add-topic python,opencv,line-art,image-processing,qt,pyside6,sketch,black-and-white,laser-cutting,gui
+> ```
+
 ## 额外：设置仓库封面（社交预览图）
 
 仓库里已经准备好三张图（都在 `assets/`）：
