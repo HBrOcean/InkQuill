@@ -41,6 +41,14 @@ from dataclasses import dataclass, replace
 
 import numpy as np
 
+# Windows 控制台默认编码是 cp1252 / GBK，直接打印中文会抛 UnicodeEncodeError。
+# 这里把标准输出 / 错误流统一改成 UTF-8，保证跨平台（尤其是 GitHub Actions 的 Windows）稳定。
+for _stream in (sys.stdout, sys.stderr):
+    try:
+        _stream.reconfigure(encoding="utf-8", errors="replace")
+    except Exception:
+        pass
+
 try:
     import cv2
 except ImportError:  # pragma: no cover
