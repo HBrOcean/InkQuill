@@ -10,9 +10,17 @@
         其他系统可把 BOLD / REG 改成系统里存在的字体路径。
 """
 import os
+import sys
 
 import numpy as np
 from PIL import Image, ImageDraw, ImageFont
+
+# Windows 控制台默认编码非 UTF-8，打印中文前先统一切换，避免 UnicodeEncodeError。
+for _stream in (sys.stdout, sys.stderr):
+    try:
+        _stream.reconfigure(encoding="utf-8", errors="replace")
+    except Exception:
+        pass
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ASSETS = os.path.join(ROOT, "assets")

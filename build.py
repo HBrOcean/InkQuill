@@ -19,6 +19,14 @@ import os
 import subprocess
 import sys
 
+# Windows 控制台默认编码是 cp1252 / GBK，直接打印中文会抛 UnicodeEncodeError。
+# 统一把标准输出 / 错误流改成 UTF-8，保证在 GitHub Actions 的 Windows 上也能正常跑。
+for _stream in (sys.stdout, sys.stderr):
+    try:
+        _stream.reconfigure(encoding="utf-8", errors="replace")
+    except Exception:
+        pass
+
 ROOT = os.path.dirname(os.path.abspath(__file__))
 ENTRY = os.path.join(ROOT, "inkquill.py")
 NAME = "inkquill"
